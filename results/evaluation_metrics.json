@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-04-26 03:38:16",
+  "dataset": {
+    "name": "MovieLens 100K",
+    "num_users": 943,
+    "num_items": 1682,
+    "test_size": 20000
+  },
+  "models": {
+    "user_based_cf": {
+      "rmse": 0.970567894943508,
+      "precision@10": 0.8466595970307529,
+      "recall@10": 0.6744862473075899,
+      "parameters": {
+        "min_common_items": 5
+      }
+    },
+    "item_based_cf": {
+      "rmse": 0.9175181402894736,
+      "precision@10": 0.8466595970307529,
+      "recall@10": 0.6744862473075899,
+      "parameters": {
+        "min_common_users": 5
+      }
+    }
+  },
+  "evaluation_notes": [
+    "Metrics calculated on 20% stratified test split",
+    "Precision/Recall calculated for top-10 recommendations"
+  ]
+}
